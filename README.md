@@ -1,4 +1,4 @@
- Hospital Readmission Risk Prediction Model
+Hospital Readmission Risk Prediction Model
 Project Overview
 This project focuses on identifying key risk factors for 30-day hospital readmissions by integrating Machine Learning and Classical Statistics. The goal is to provide healthcare providers with actionable insights to improve patient discharge planning and reduce early readmissions.
 Technical Workflow
@@ -35,6 +35,7 @@ Phase 2: Predictive Modeling (VS Code)
 •	Algorithm: A Random Forest Classifier was implemented using scikit-learn.
 •	Training: The data was split into training (80%) and testing (20%) sets to evaluate performance.
 •	Feature Importance: The model ranked the comorbidity index (49.1%) and age (30.5%) as the most influential factors for predicting readmission.
+
 Phase 3: Statistical Validation (IBM SPSS)
 •	Data Integration: The generated readmission_analysis.csv was imported into SPSS for rigorous statistical testing.
 •	Binary Logistic Regression: This was performed to validate the machine learning findings and calculate the Odds Ratio (Exp(B)).
