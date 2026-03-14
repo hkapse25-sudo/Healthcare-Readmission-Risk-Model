@@ -69,15 +69,31 @@ The following features were identified as the **most influential predictors of h
 
 # 📉 Visualization
 
-## 📊 Clinical Data Visualization (SPSS)
+## 📊 Data Visualizations & Model Insights
 
-To validate the Python model, I generated a clustered bar chart in IBM SPSS. This visualization confirms the high correlation between **Age**, **Comorbidity levels**, and **30-day Readmission** status.
+To provide a comprehensive view of the Readmission Risk Model, I analyzed the data distribution, feature importance, and clinical outcomes.
 
+### 1. Feature Importance (Python)
+This chart identifies which factors had the most weight in our Random Forest model. As predicted, **Comorbidity Index** and **Age** are the primary drivers.
 
-
-*Figure 1: Clustered Bar Chart showing the percentage of patients readmitted vs. not readmitted based on clinical risk factors.*
+![Feature Importance](Figure_1.png)
 
 ---
+
+### 2. Clinical Distribution (EDA)
+This visualization shows the spread of our patient demographics, helping to ensure our synthetic dataset mirrors real-world healthcare trends.
+
+![Clinical Distribution](Figure_2.png)
+
+---
+
+### 3. Readmission Outcomes by Risk Factor
+This chart validates the model's accuracy by showing the actual readmission events mapped against key predictors.
+
+![Readmission Outcomes](Figure_3.png)
+
+---
+
 
 # 🛠 Tools & Technologies
 
