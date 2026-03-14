@@ -1,53 +1,226 @@
-Hospital Readmission Risk Prediction Model
-Project Overview
-This project focuses on identifying key risk factors for 30-day hospital readmissions by integrating Machine Learning and Classical Statistics. The goal is to provide healthcare providers with actionable insights to improve patient discharge planning and reduce early readmissions.
-Technical Workflow
-The project utilizes a dual-tool approach to ensure both predictive power and statistical validity:
-•	Python (VS Code): Used to build a Random Forest Classifier to predict readmission risk based on patient demographics and comorbidities.
-•	IBM SPSS: Used to perform Binary Logistic Regression to validate the statistical significance of the identified risk factors.
-Key Findings
-1. Model Performance
-•	Overall Accuracy: The Random Forest model achieved a predictive accuracy of 89.0%.
-•	Statistical Validation: The SPSS Logistic Regression confirmed a strong model fit with a Nagelkerke R Square of .829
-2. Identified Risk Factors
-•	Based on feature importance and odds ratios, the following factors were the most significant:
-Factor	Python Importance	SPSS Exp(B) (Odds Ratio)	Statistical Sig. (p-value)
-Comorbidity Index	0.491	20.773	< .001
-Patient Age	0.305	1.168	< .001
-Lab Procedures	0.105	1.000	0.990
+# 🏥 Hospital Readmission Risk Prediction Model
 
-•	Comorbidity Impact: Patients with higher comorbidity indices are significantly more likely to be readmitted (approx. 20 times more likely per unit increase).
-•	Age Correlation: Risk of readmission increases steadily as the patient age increases.
-•	![Readmission Risk by Age](Analysis_Results/Readmission_by_Age_Chart.png)
-Tools & Libraries
-•	Languages: Python 3.13.
-•	Libraries: pandas, NumPy, scikit-learn, matplotlib.
-•	Software: VS Code, IBM SPSS Statistics.
- 
+A Machine Learning and Statistical Analysis project focused on predicting **30-day hospital readmission risk** using patient demographic and clinical factors.
 
-🛠 Methodology
-The analysis followed a multi-stage workflow to ensure the reliability of the readmission risk predictions.
-Phase 1: Data Generation & Preprocessing (Python)
-•	Synthetic Data Creation: A clinical dataset of 1,000 patient records was generated using NumPy and Pandas.
-•	Feature Engineering: Variables included patient age, gender, comorbidity index, number of lab procedures, and number of medications.
-•	Target Logic: A 30-day readmission flag was created using a weighted risk probability based on clinical correlations between age and chronic conditions.
-Phase 2: Predictive Modeling (VS Code)
-•	Algorithm: A Random Forest Classifier was implemented using scikit-learn.
-•	Training: The data was split into training (80%) and testing (20%) sets to evaluate performance.
-•	Feature Importance: The model ranked the comorbidity index (49.1%) and age (30.5%) as the most influential factors for predicting readmission.
+This project combines **predictive machine learning** with **classical statistical validation** to identify the most influential drivers of hospital readmissions and provide insights that can help improve **patient discharge planning and healthcare outcomes**.
 
-Phase 3: Statistical Validation (IBM SPSS)
-•	Data Integration: The generated readmission_analysis.csv was imported into SPSS for rigorous statistical testing.
-•	Binary Logistic Regression: This was performed to validate the machine learning findings and calculate the Odds Ratio (Exp(B)).
-•	Significance Testing: Both primary risk factors achieved a p-value of <.001, confirming they are statistically significant predictors.
-Phase 4: Visualization
-•	Python: Generated a feature importance horizontal bar chart to visualize model logic.
-•	SPSS: Created a Clustered Bar Chart to display the percentage of readmissions across different age categories, providing a clear demographic view of risk.
+---
 
-Summary :
-By including the SPSS files, you are confirming the impressive stats you've already found:
-•	Accuracy: 90.0%.
-•	Top Predictor: Comorbidity Index with an Exp(B) of 20.773.
-•	Significance: All primary factors show a P-value of <.001.
+# 📌 Project Overview
 
+Hospital readmissions are a major challenge for healthcare systems worldwide. Early identification of high-risk patients can help healthcare providers implement preventative strategies and reduce avoidable readmissions.
+
+This project integrates:
+
+- 🤖 **Machine Learning (Random Forest Classifier)**
+- 📊 **Statistical Modeling (Binary Logistic Regression)**
+
+The goal is to combine **predictive performance** with **statistical interpretability**.
+
+---
+
+# ⚙️ Technical Workflow
+
+The project uses a **dual-tool analytical framework** to ensure both predictive accuracy and statistical reliability.
+
+| Tool | Purpose |
+|-----|------|
+| 🐍 **Python (VS Code)** | Building the Random Forest model to predict readmission risk |
+| 📈 **IBM SPSS** | Validating predictors using Binary Logistic Regression |
+
+---
+
+# 📊 Key Findings
+
+## 1️⃣ Model Performance
+
+| Metric | Result |
+|------|------|
+| 🎯 Random Forest Accuracy | **89.0%** |
+| 📈 Logistic Regression Fit | **Nagelkerke R² = 0.829** |
+
+These results demonstrate strong predictive power and statistical reliability.
+
+---
+
+## 2️⃣ Identified Risk Factors
+
+The following features were identified as the **most influential predictors of hospital readmission**:
+
+| Factor | Python Importance | SPSS Exp(B) (Odds Ratio) | P-Value |
+|------|------|------|------|
+| **Comorbidity Index** | 0.491 | 20.773 | < .001 |
+| **Patient Age** | 0.305 | 1.168 | < .001 |
+| **Lab Procedures** | 0.105 | 1.000 | 0.990 |
+
+### 🔍 Interpretation
+
+**Comorbidity Index**
+- Strongest predictor of readmission
+- Patients with higher comorbidity scores are **~20x more likely to be readmitted**
+
+**Patient Age**
+- Readmission risk increases gradually with **increasing age**
+
+**Lab Procedures**
+- Minimal predictive contribution in this dataset
+
+---
+
+# 📉 Visualization
+
+### Readmission Risk by Age
+
+![Readmission Risk by Age](Analysis_Results/Readmission_by_Age_Chart.png)
+
+This visualization highlights the **trend of increasing readmission risk across older age groups**.
+
+---
+
+# 🛠 Tools & Technologies
+
+### Programming
+- 🐍 **Python 3.13**
+
+### Python Libraries
+- `pandas`
+- `NumPy`
+- `scikit-learn`
+- `matplotlib`
+
+### Software
+- 💻 **VS Code**
+- 📊 **IBM SPSS Statistics**
+
+---
+
+# 🔬 Methodology
+
+The analysis followed a **multi-stage workflow** to ensure reliability and reproducibility.
+
+---
+
+## Phase 1: Data Generation & Preprocessing (Python)
+
+- 📦 **Synthetic Dataset Creation**
+  - Generated **1,000 patient records** using NumPy and Pandas.
+
+- 🧩 **Feature Engineering**
+  - Variables included:
+  - Patient Age
+  - Gender
+  - Comorbidity Index
+  - Number of Lab Procedures
+  - Number of Medications
+
+- 🎯 **Target Variable**
+  - A **30-day readmission flag** was created using weighted clinical risk probabilities based on age and comorbidities.
+
+---
+
+## Phase 2: Predictive Modeling (VS Code)
+
+- 🌲 **Algorithm:** Random Forest Classifier (`scikit-learn`)
+- 📂 **Data Split:**
+  - Training set: **80%**
+  - Testing set: **20%**
+
+### Feature Importance Results
+
+| Feature | Importance |
+|------|------|
+| Comorbidity Index | 49.1% |
+| Age | 30.5% |
+| Lab Procedures | 10.5% |
+
+The model identified **comorbidity burden and age** as the strongest predictors.
+
+---
+
+## Phase 3: Statistical Validation (IBM SPSS)
+
+To confirm the machine learning findings:
+
+- 📥 Imported `readmission_analysis.csv` into SPSS
+- 📊 Conducted **Binary Logistic Regression**
+- 📈 Calculated **Odds Ratios (Exp(B))**
+- 🔬 Performed **statistical significance testing**
+
+### Key Result
+
+Both major predictors achieved:
+p-value < .001
+
+
+Confirming they are **statistically significant predictors of readmission risk**.
+
+---
+
+## Phase 4: Visualization
+
+### Python
+- Feature importance **horizontal bar chart**
+
+### SPSS
+- **Clustered Bar Chart**
+- Shows **readmission percentage across age groups**
+
+This helps provide a **clear demographic perspective of risk patterns**.
+
+---
+
+# 📈 Project Summary
+
+Key outcomes of this analysis include:
+
+- 🎯 **Model Accuracy:** ~89–90%
+- 🧠 **Top Predictor:** Comorbidity Index  
+  - Odds Ratio: **20.773**
+- 📊 **Statistical Significance:**  
+  - Primary predictors with **p < .001**
+
+This confirms that **patients with multiple chronic conditions and increasing age are at significantly higher risk of early readmission.**
+
+---
+
+# 🚀 Potential Applications
+
+This model can help support:
+
+- Hospital **discharge planning**
+- **Patient risk stratification**
+- Early **post-discharge interventions**
+- **Healthcare policy planning**
+
+---
+
+# 📂 Repository Structure
+Hospital-Readmission-Prediction/
+│
+├── data/
+│ └── readmission_analysis.csv
+│
+├── notebooks/
+│ └── model_training.ipynb
+│
+├── Analysis_Results/
+│ └── Readmission_by_Age_Chart.png
+│
+├── spss_analysis/
+│ └── logistic_regression_output.spv
+│
+└── README.md
+
+
+---
+
+# 👨‍💻 Author
+
+Developed as a **Healthcare Data Analytics & Machine Learning project** integrating **Python-based predictive modeling** with **SPSS statistical validation**.
+
+---
+
+# 📜 License
+
+This project is available for **educational and research purposes**.
 
