@@ -73,7 +73,7 @@ The following features were identified as the **most influential predictors of h
 
 To validate the Python model, I generated a clustered bar chart in IBM SPSS. This visualization confirms the high correlation between **Age**, **Comorbidity levels**, and **30-day Readmission** status.
 
-risk_factors_chart.png
+https://github.com/hkapse25-sudo/Healthcare-Readmission-Risk-Model/blob/9e189cdc1960e00adc305433ac2b4b5b75153a9d/risk_factors_chart.png
 
 *Figure 1: Clustered Bar Chart showing the percentage of patients readmitted vs. not readmitted based on clinical risk factors.*
 
