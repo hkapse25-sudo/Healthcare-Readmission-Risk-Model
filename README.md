@@ -71,7 +71,7 @@ The following features were identified as the **most influential predictors of h
 
 ### Readmission Risk by Age
 
-![Readmission Risk by Age](Analysis_Results/Readmission_by_Age_Chart.png)
+![Clinical Readmission Analysis](readmission_age_chart.png)
 
 This visualization highlights the **trend of increasing readmission risk across older age groups**.
 
