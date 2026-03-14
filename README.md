@@ -69,11 +69,13 @@ The following features were identified as the **most influential predictors of h
 
 # 📉 Visualization
 
-### Readmission Risk by Age
+## 📊 Clinical Data Visualization (SPSS)
 
-![Clinical Readmission Analysis](readmission_age_chart.png)
+To validate the Python model, I generated a clustered bar chart in IBM SPSS. This visualization confirms the high correlation between **Age**, **Comorbidity levels**, and **30-day Readmission** status.
 
-This visualization highlights the **trend of increasing readmission risk across older age groups**.
+![SPSS Clinical Analysis Chart](spss_chart.png)
+
+*Figure 1: Clustered Bar Chart showing the percentage of patients readmitted vs. not readmitted based on clinical risk factors.*
 
 ---
 
