@@ -212,26 +212,6 @@ This model can help support:
 
 ---
 
-# 📂 Repository Structure
-Hospital-Readmission-Prediction/
-│
-├── data/
-│ └── readmission_analysis.csv
-│
-├── notebooks/
-│ └── model_training.ipynb
-│
-├── Analysis_Results/
-│ └── Readmission_by_Age_Chart.png
-│
-├── spss_analysis/
-│ └── logistic_regression_output.spv
-│
-└── README.md
-
-
----
-
 # 👨‍💻 Author
 
 Developed as a **Healthcare Data Analytics & Machine Learning project** integrating **Python-based predictive modeling** with **SPSS statistical validation**.
